@@ -8,26 +8,51 @@
     line-height: 120%;
     text-transform: uppercase;
     min-width: 700px;
+    margin-bottom: 0 0 24px;
 }
 
 .about__description {
     line-height: 150%;
     min-width: 700px;
+    margin-bottom: 0 0 72px;
 }
 
 .about__list {
-    line-height: 150%;
-    min-width: 700px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 384px);
+    gap: 24px 32px;
 }
 
 .about__item {
+    padding: 6px 6px 6px 96px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 80px;
+}
 
+.about__item_top {
+    background-image: url(../img/top.svg);
+}
+
+.about__item_master {
+    background-image: url(../img/master.svg);
+}
+
+.about__item_guarantee {
+    background-image: url(../img/guarantee.svg);
 }
 
 .about__item-title {
-
+    margin: 0 0 8px;
+    font-weight: 400;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 .about__item-description {
-
+    margin: 0;
+    line-height: 130%;
 }
