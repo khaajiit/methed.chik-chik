@@ -13,15 +13,24 @@
 .about__description {
     line-height: 150%;
     min-width: 700px;
+    margin: 0 0 72px;
 }
 
 .about__list {
-    line-height: 150%;
-    min-width: 700px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 384px);
+    gap: 24px 32px;
 }
 
 .about__item {
 
+}
+
+.about__item_top {
+    background-image: url(../img/logo.svg);
 }
 
 .about__item-title {
