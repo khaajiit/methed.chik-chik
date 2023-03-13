@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/price.css">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/reserve.css">
     <link rel="stylesheet" href="css/radio.css">
+    <link rel="stylesheet" href="css/reserve.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <script src="js/script.js"></script>
 </head>
@@ -25,7 +26,7 @@
     <header class="header">
         <div class="container">
             <div class="header__container">
-                <img lass="header__logo" src="img/logo.svg" alt="Логотип Барбешоп chik-chik">
+                <img class="header__logo" src="img/logo.svg" alt="Логотип Барбешоп chik-chik">
 
                 <nav class="header__navigation navigation">
                     <ul class="navigation__list">
@@ -147,7 +148,7 @@
                     <li class="about__item about__item_master">
                         <h3 class="about__item-title">Мастера бород и усов</h3>
                         
-                        <p class="about__item-description">Мы заботливо уложим вашу бороду и усы</p>
+                        <p class="about__item-description">Мы заботливо уложим вашу бороду и&nbsp;усы</p>
                     </li>                    
                     <li class="about__item about__item_guarantee">
                         <h3 class="about__item-title">Гарантия качества</h3>
@@ -310,23 +311,35 @@
     </main>
 
     <footer class="footer">
-        <img src="img/logo.svg" alt="Логотип Chik-chik">
+        <div class="container">
+            <div class="footer__container">
+                <img сlass="header__logo" src="img/logo.svg" alt="Логотип Барбешоп chik-chik">
 
-        <ul class="navigation__list">
-            <li class="navigation__item">
-                <a href="#price" class="navigation__link">Стоимость услуг</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#about" class="navigation__link">О нас</a>
-            </li>
-        </ul>
+                <div class="header__navigation navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="#price" class="navigation__link">Стоимость услуг</a>
+                        </li>
 
-        <ul>
-            <li>Designer: Anastasia Ilina</li>
-            <li>Developer: Sergey Ivanov</li>
-        </ul>
+                        <li class="navigation__item">
+                            <a href="#about" class="navigation__link">О нас</a>
+                        </li>
 
-        <p>chik-chik 2023</p>
+                    </ul>
+                </div>
+
+                <ul class="footer__developers">
+                    <li class="footer__developer">
+                        Designer: <a class="footer__developer-link" href="https://t.me/Mrshmallowww">Anastasia Ilina</a>
+                    </li>
+                    <li class="footer__developer">
+                        Developer: <a class="footer__developer-link" href="https://t.me/sseergO">Sergej Ivanov</a>
+                    </li>
+                </ul>
+
+                <p class="footer__copyright">chik chik, 2023</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

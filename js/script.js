@@ -57,7 +57,7 @@ const startSlider = () => {
     window.addEventListener('resize', () => {
         if (activeSlide + 2 > sliderItems.length && document.documentElement.offsetWidth > 560) {
             activeSlide = sliderItems.length = 2;
-            sliderItems[activeSlide]?.classList.add('slider__item_active')
+            sliderItems[activeSlide]?.classList.add('slider__item_active');
         }
 
         position = -sliderItems[0].clientWidth * (activeSlide - 1);

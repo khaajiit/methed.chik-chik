@@ -8,14 +8,14 @@
     line-height: 120%;
     text-transform: uppercase;
     min-width: 700px;
-    margin-bottom: 0 0 24px;
+    margin-bottom: 24px;
 }
 
 .about__description {
     line-height: 150%;
     min-width: 700px;
     margin: 0 0 72px;
-    margin-bottom: 0 0 72px;
+    margin-bottom: 72px;
 }
 
 .about__list {
@@ -23,15 +23,16 @@
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 384px);
-    gap: 24px 32px;
+    grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+    gap: 24px;
 }
 
 .about__item {
-    padding: 6px 6px 6px 96px;
+    padding: 6px 0 6px 96px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: 80px;
+    min-height: 80px;
 }
 
 .about__item_top {
@@ -60,4 +61,76 @@
 .about__item-description {
     margin: 0;
     line-height: 130%;
+}
+
+@media (max-width: 1024px) {
+    .about__description {
+        margin-bottom: 46px;
+    }
+
+    .about__list {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        column-gap: 29px;
+    }    
+    
+    .about__item {
+        padding-top: 96px;
+        background-position: top left;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 0;
+    }
+
+    .about__title {
+        margin-bottom: 24px;
+        min-width: 300px;
+    }
+
+    .about__description {
+        margin-bottom: 32px;
+        min-width: 300px;
+    }
+
+    .about__list {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }    
+    
+    .about__item {
+        background-position: left;
+        padding-left: 96px;
+        padding-top: 0;
+    }
+
+    .about__item-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 560px) {
+    .about {
+        padding: 32px 0;
+    }
+    
+    .about__list {
+        grid-template-columns: minmax(272px, 1fr);
+    }    
+
+    .about__title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .about__description {
+        font-size: 12px;
+    }
+
+    .about__item {
+        padding-left: 72px;
+        min-height: 64px;
+        background-size: 64px;
+    }
 }
