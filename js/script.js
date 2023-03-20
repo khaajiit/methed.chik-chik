@@ -96,7 +96,7 @@ const renderPrice = (wrapper, data) => {
         const priceItem = document.createElement('li');
         priceItem.classList.add('price__item');
 
-        priceItem,innerHTML = `
+        priceItem.innerHTML = `
             <span class="price__item-title">${item.name}</span>
             <span class="price__item-count">${item.price} руб</span>
         `;
@@ -129,16 +129,19 @@ const initService = () => {
     addPreload(reserveFieldsetService);
 
     fetch(`${API_URL}/api`)
-    .then(response => response.json())
-    .then(data => {
-        renderPrice(priceList, data);
-        removePreload(priceList);
-        return data;
-    })
-    .then (data => {
-        renderService(reserveFieldsetService, data);
-        removePreload(reserveFieldsetService);
-    })
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log('data: ', data);
+            renderPrice(priceList, data);
+            removePreload(priceList);
+            return data;
+        })
+        .then (data => {
+            renderService(reserveFieldsetService, data);
+            removePreload(reserveFieldsetService);
+        })
 };
 
 const addDisabled = (arr) => {
